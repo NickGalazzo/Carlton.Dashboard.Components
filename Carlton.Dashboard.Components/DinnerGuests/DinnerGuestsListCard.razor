@@ -1,0 +1,22 @@
+﻿@using Carlton.Dashboard.ViewModels;
+
+@namespace Carlton.Dashboard.Components
+@inherits CarltonComponentBase<DinnerGuests>
+
+<ListCard CardTitle="Dinner Guests" SubTitle="Guests" Items="ViewModel.Guests">
+    <ActionBarContent>
+        <DashboardCardActionBar OnComponentEvent="base.OnComponentEvent" ComponentStatus="base.ComponentStatus" />
+    </ActionBarContent>
+
+    <HeaderContent>
+        <DinnerGuestsSelfStatus ViewModel="ViewModel.MyDinnerGuestStatus" OnComponentEvent="OnComponentEvent" />
+    </HeaderContent>
+
+    <ItemTemplate Context="guest">
+        <DinnerGuestsListItem ViewModel="guest" ShowIndicator="true" />
+    </ItemTemplate>
+</ListCard>
+
+
+
+

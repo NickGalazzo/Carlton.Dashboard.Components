@@ -1,0 +1,28 @@
+﻿@import "../Styles/themes/theme_defenitions.scss";
+
+.to-do-list-item {
+    span.to-do-name {
+        font-size: 12pt;
+        line-height: 2.3;
+
+        @include themify($themes) {
+            color: themed('textColor');
+        }
+
+        &.completed {
+            text-decoration: line-through;
+        }
+    }
+
+    ::deep span.to-do-completed {
+        @include themify($themes) {
+            color: themed('completedColor');
+        }
+    }
+
+    ::deep .checkbox span {
+        @include themify($themes) {
+            color: themed('completedColor');
+        }
+    }
+}

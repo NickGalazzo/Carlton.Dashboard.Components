@@ -1,0 +1,16 @@
+﻿@using Carlton.Dashboard.ViewModels
+
+@namespace Carlton.Dashboard.Components
+@inherits CarltonComponentBase<DashboardAggregation>
+
+<CountCard Count="@ViewModel.Count"
+                    MessageTemplate="@MESSAGE_TEMPLATE"
+                    Icon="@ICON"
+                    AccentColorClass="@ACCENT_COLOR" />
+
+
+@code{
+    private const string MESSAGE_TEMPLATE = "Low Items";
+    private const string ICON = "mdi-cart";
+    private const string ACCENT_COLOR = "accent-color-3";
+}

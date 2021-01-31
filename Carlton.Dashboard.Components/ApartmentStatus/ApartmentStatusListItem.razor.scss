@@ -1,0 +1,18 @@
+﻿@import "../Styles/themes/theme_defenitions.scss";
+
+.apartment-status-list-item {
+    max-width: 500px;
+    text-align: center;
+
+    span.status-value-complete {
+        @include themify($themes) {
+            color: themed('completedColor');
+        }
+    }
+
+    span.status-value-incomplete {
+        @include themify($themes) {
+            color: themed('pendingColor');
+        }
+    }
+}

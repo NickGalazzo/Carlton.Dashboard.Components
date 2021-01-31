@@ -1,0 +1,42 @@
+﻿@import "../Styles/themes/theme_defenitions.scss";
+
+.feed-list-item {
+    max-width: 350px;
+    margin-top: 10px;
+
+    .feed-item-row {
+        border-bottom-style: solid;
+
+        @include themify {
+            border-bottom-color: rgba(themed('textColor'), 0.25);
+        }
+    }
+
+    .feed-title {
+        font-weight: bold;
+
+        @include themify($themes) {
+            color: themed('completedColor');
+        }
+    }
+
+    .feed-message {
+        font-size: 9pt;
+
+        @include themify($themes) {
+            color: themed('textColor');
+        }
+    }
+
+    .feed-date-col {
+        .feed-date {
+            font-size: 8px;
+            margin-top: 10px;
+            vertical-align: top;
+
+            @include themify($themes) {
+                color: themed('textColor');
+            }
+        }
+    }
+}

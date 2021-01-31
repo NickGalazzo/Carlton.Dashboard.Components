@@ -1,0 +1,38 @@
+﻿@import "../Styles/themes/theme_defenitions.scss";
+
+.groceries-list-item {
+    max-width: 400px;
+
+    span.item-name {
+        @include themify($themes) {
+            color: themed('textColor');
+        }
+    }
+
+    .progress {
+        height: 8px;
+        background-color: transparent;
+    }
+
+    .progress-bar {
+        border-radius: 10px;
+
+        &.high {
+            @include themify($themes) {
+                background-color: themed('highColor');
+            }
+        }
+
+        &.medium {
+            @include themify($themes) {
+                background-color: themed('mediumColor');
+            }
+        }
+
+        &.low {
+            @include themify($themes) {
+                background-color: themed('lowColor');
+            }
+        }
+    }
+}

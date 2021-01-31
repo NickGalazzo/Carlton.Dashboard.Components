@@ -1,0 +1,17 @@
+﻿@using Carlton.Dashboard.ViewModels
+
+@namespace Carlton.Dashboard.Components
+@inherits CarltonComponentBase<FeedItems>
+
+<ListCard Items="ViewModel.Items" CardTitle="Feed">
+    <ActionBarContent>
+        <DashboardCardActionBar OnComponentEvent="base.OnComponentEvent" ComponentStatus="base.ComponentStatus" />
+    </ActionBarContent>
+
+    <ItemTemplate Context="feedItem">
+        <FeedListItem ViewModel="feedItem" />
+    </ItemTemplate>
+</ListCard>
+
+
+

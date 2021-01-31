@@ -1,0 +1,31 @@
+﻿@using Carlton.Dashboard.ViewModels
+
+@namespace Carlton.Dashboard.Components
+
+@inherits CarltonComponentBase<DinnerGuest>
+
+<div class="row dinner-guests-list-item">
+    <div class="col-3 text-center">
+        <Avatar/>
+    </div>
+    <div class="col-6 text-center">
+        <div class="guest-name">@ViewModel.GuestName</div>
+        @if(!ViewModel.IsHomeForDinner)
+        {
+            <div class="guest-message">@ViewModel.Reason.ReasonText</div>
+        }
+    </div>
+    <div class="col-3 text-center">
+        @if(ShowIndicator)
+        {
+            <span class="mdi mdi-24px mdi-food @(ViewModel.IsHomeForDinner ? IS_HOME_FOR_DINNER_CLASS : string.Empty)"></span>
+        }
+    </div>
+</div>
+
+@code  {
+    private const string IS_HOME_FOR_DINNER_CLASS = "is-home-for-dinner";
+
+    [Parameter]
+    public bool ShowIndicator { get; set; } = true;
+}

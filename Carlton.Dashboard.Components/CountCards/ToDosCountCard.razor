@@ -1,0 +1,17 @@
+﻿@using Carlton.Dashboard.ViewModels
+
+@namespace Carlton.Dashboard.Components
+@inherits CarltonComponentBase<DashboardAggregation>
+
+<CountCard Count="@ViewModel.Count"
+                    MessageTemplate="@MESSAGE_TEMPLATE"
+                    Icon="@ICON"
+                    AccentColorClass="@ACCENT_COLOR" />
+
+
+
+@code{
+    private const string MESSAGE_TEMPLATE = "Open Tasks";
+    private const string ICON = "mdi-clipboard-check";
+    private const string ACCENT_COLOR = "accent-color-1";
+}

@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+    <Content Remove="wwwroot\ToDo.Test.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\libs\Carlton.Base.Client.Components\Styles\themes\theme_defenitions.scss" Link="Styles\themes\theme_defenitions.scss" />
+    <None Include="..\..\libs\Carlton.Base.Client.Components\Styles\themes\theme_utilities.scss" Link="Styles\themes\theme_utilities.scss" />
+    <None Include="compilerconfig.json" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.0" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\libs\Carlton.Base.Client.Components\Carlton.Base.Client.Components.csproj" />
+    <ProjectReference Include="..\..\libs\Carlton.Base.Client.State.Abstractions\Carlton.Base.Client.State.Abstractions.csproj" />
+    <ProjectReference Include="..\Carlton.Dashboard.ViewModels\Carlton.Dashboard.ViewModels.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Styles\themes\" />
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\styles\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Resource Include="wwwroot\Samples\ToDoListItem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="wwwroot\ToDo.Test.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>

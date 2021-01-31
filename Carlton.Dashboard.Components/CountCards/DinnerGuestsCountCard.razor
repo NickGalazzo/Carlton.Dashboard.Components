@@ -1,0 +1,17 @@
+﻿@using Carlton.Dashboard.ViewModels
+
+@namespace Carlton.Dashboard.Components
+@inherits CarltonComponentBase<DashboardAggregation>
+
+<CountCard Count="@ViewModel.Count"
+                    AccentColorClass="@ACCENT_COLOR"
+                    MessageTemplate="@MESSAGE_TEMPLATE"
+                    Icon="@ICON" />
+
+
+
+@code{
+    private const string MESSAGE_TEMPLATE = "Guests for Dinner";
+    private const string ICON = "mdi-silverware-fork-knife";
+    private const string ACCENT_COLOR = "accent-color-4";
+}

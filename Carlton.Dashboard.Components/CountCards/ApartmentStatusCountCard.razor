@@ -1,0 +1,16 @@
+﻿@using Carlton.Dashboard.ViewModels
+
+@namespace Carlton.Dashboard.Components
+@inherits CarltonComponentBase<DashboardAggregation>
+
+<CountCard Count="@ViewModel.Count"
+                    AccentColorClass="@ACCENT_COLOR"
+                    Icon="@ICON"
+                    MessageTemplate="@MESSAGE_TEMPLATE" />
+
+
+@code{
+    private const string MESSAGE_TEMPLATE = "Pending Statuses";
+    private const string ICON = "mdi-home";
+    private const string ACCENT_COLOR = "accent-color-2";
+}

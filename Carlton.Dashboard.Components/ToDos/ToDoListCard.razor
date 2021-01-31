@@ -1,0 +1,19 @@
+﻿@using Carlton.Dashboard.ViewModels
+
+@namespace Carlton.Dashboard.Components
+@inherits CarltonComponentBase<ToDos>
+
+
+<ListCard CardTitle="To-Do's" Items="ViewModel.ToDoList">
+    <ActionBarContent>
+        <DashboardCardActionBar OnComponentEvent="base.OnComponentEvent" ComponentStatus="base.ComponentStatus" />
+    </ActionBarContent>
+
+    <ItemTemplate Context="toDo">
+        <ToDoListItem ViewModel="toDo" OnComponentEvent="base.OnComponentEvent" />
+    </ItemTemplate>
+</ListCard>
+
+
+
+
