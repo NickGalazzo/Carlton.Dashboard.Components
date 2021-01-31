@@ -74,7 +74,7 @@ namespace Carlton.Dashboard.Components.Test
                 ("ViewModel", DinnerGuestsTestModels.DinnerGuestsSelfHomeModel()));
 
             // Act
-            var reasonElement = cut.Find(".carlton-select .options");
+            var reasonElement = cut.Find(".select .options");
 
             // Assert
             Assert.True(reasonElement.HasAttribute("disabled"));
@@ -89,7 +89,7 @@ namespace Carlton.Dashboard.Components.Test
                 ("ViewModel", DinnerGuestsTestModels.DinnerGuestsSelfNotHomeModel()));
 
             // Act
-            var reasonElement = cut.Find(".carlton-select .options");
+            var reasonElement = cut.Find(".select .options");
 
             // Assert
             Assert.False(reasonElement.HasAttribute("disabled"));

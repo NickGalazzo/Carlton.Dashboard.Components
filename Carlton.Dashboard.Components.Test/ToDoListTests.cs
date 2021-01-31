@@ -47,7 +47,7 @@ namespace Carlton.Dashboard.Components.Test
             );
 
             // Act
-            cut.Find(".carlton-checkbox span").Click();
+            cut.Find(".checkbox span").Click();
 
 
             // Assert
@@ -67,7 +67,7 @@ namespace Carlton.Dashboard.Components.Test
             );
 
             // Act
-            cut.Find(".carlton-checkbox span").Click();
+            cut.Find(".checkbox span").Click();
 
 
             // Assert
@@ -117,7 +117,7 @@ namespace Carlton.Dashboard.Components.Test
             );
 
             // Act
-            var item = cut.FindComponents<ToDoListItem>().First();
+            var item = cut.FindComponents<ToDoListItem>()[0];
 
             // Assert
             item.MarkupMatches(TestComponentMarkupConstants.ToDoListItem_Unchecked);

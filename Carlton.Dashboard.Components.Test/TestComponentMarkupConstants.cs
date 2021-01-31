@@ -5,7 +5,7 @@
         public const string ToDoListItem_Unchecked = @"<div class='to-do-list-item'>
             <div class='row'>
                 <div class='col-1'>
-                    <div class='carlton-checkbox'>
+                    <div class='checkbox'>
                         <span class='align-middle mdi mdi-24px mdi-checkbox-blank-circle-outline'></span>
                     </div>
                 </div>
@@ -18,7 +18,7 @@
         public const string ToDoListItem_Checked = @"<div class='to-do-list-item'>
             <div class='row'>
                 <div class='col-1'>
-                    <div class='carlton-checkbox'>
+                    <div class='checkbox'>
                <span class='align-middle mdi mdi-24px mdi-check-circle'></span>
             </div>
                 </div>
@@ -118,8 +118,8 @@
 
         public const string FeedListItem = @"<div class='feed-list-item'>
             <div class='row'>
-                <!--!--><div class='col-2'>
-                    <img class='avatar-img' src='https://www.w3schools.com/w3images/avatar2.png'>
+                    <div class='col-2'>
+                    <img class='avatar-img text-center' src='https://www.w3schools.com/w3images/avatar2.png'>
                 </div>
                 <div class='col-8 offset-2'>
                     <div class='feed-title'>Nick</div>
@@ -133,110 +133,45 @@
             </div>
         </div>";
 
-        public const string ApartmentStatusCount = @"<div class='apartment-status-count-card '>
-           <div class='dashboard-count-card accent-color-2'>
-              <div class='carlton-card'>
-                 <div class='container'>
-                    <div class='card'>
-                       <div class='card-body'>
-                          <div class='row status-row'>
-                             <h5 class='col-9 card-title'></h5>
-                             <div class='col-3 status-icon'>
-                             </div>
-                          </div>
-                          <div class='header-content'>
-                          </div>
-                          <div class='primary-content'>
-                             <div class='row'>
-                                <div class='col-3 offset-1 count-icon mdi mdi-36px accent-color-2 mdi-home'></div>
-                                <span class='col-6 offset-1 count-message'>7 Pending Statuses</span>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-           </div>
-        </div>";
+        public const string ApartmentStatusCount = 
+        @"<div class='card accent-color-2' b-qmfb8ilfk8=''>
+		                <div class='card-body' b-qmfb8ilfk8=''>
+			            <div class='row' b-qmfb8ilfk8=''>
+				        <div class='col-3 count-icon mdi mdi-36px mdi-home' b-qmfb8ilfk8=''></div>
+				        <span class='col-6 offset-2 count-message' b-qmfb8ilfk8=''>7 Pending Statuses</span>
+			        </div>
+		        </div>
+	        </div>";
 
-        public const string ToDoCount = @"<div class='to-dos-count-card '>
-           <div class='dashboard-count-card accent-color-1'>
-              <div class='carlton-card'>
-                 <div class='container'>
-                    <div class='card'>
-                       <div class='card-body'>
-                          <div class='row status-row'>
-                             <h5 class='col-9 card-title'></h5>
-                             <div class='col-3 status-icon'>
-                             </div>
-                          </div>
-                          <div class='header-content'>
-                          </div>
-                          <div class='primary-content'>
-                             <div class='row'>
-                                <div class='col-3 offset-1 count-icon mdi mdi-36px accent-color-1 mdi-clipboard-check'></div>
-                                <span class='col-6 offset-1 count-message'>7 Open Tasks</span>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-           </div>
-        </div>";
+        public const string ToDoCount = @"
+	    <div class='card accent-color-1' b-qmfb8ilfk8=''>
+		    <div class='card-body' b-qmfb8ilfk8=''>
+			    <div class='row' b-qmfb8ilfk8=''>
+				    <div class='col-3 count-icon mdi mdi-36px mdi-clipboard-check' b-qmfb8ilfk8=''></div>
+				    <span class='col-6 offset-2 count-message' b-qmfb8ilfk8=''>7 Open Tasks</span>
+			    </div>
+		    </div>
+	    </div>";
 
         public const string DinnerGuestsCount = @"
-        <div class='dinner-guests-count-card'>
-            <div class='dashboard-count-card accent-color-4'>
-               <div class='carlton-card'>
-                  <div class='container'>
-                     <div class='card'>
-                        <div class='card-body'>
-                           <div class='row status-row'>
-                              <h5 class='col-9 card-title'></h5>
-                              <div class='col-3 status-icon'>
-                              </div>
-                           </div>
-                           <div class='header-content'>
-                           </div>
-                           <div class='primary-content'>
-                              <div class='row'>
-                                 <div class='col-3 offset-1 count-icon mdi mdi-36px accent-color-4 mdi-silverware-fork-knife'></div>
-                                 <span class='col-6 offset-1 count-message'>7 Guests for Dinner</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            </div>";
+	    <div class='card accent-color-4' b-qmfb8ilfk8=''>
+		    <div class='card-body' b-qmfb8ilfk8=''>
+			    <div class='row' b-qmfb8ilfk8=''>
+				    <div class='col-3 count-icon mdi mdi-36px mdi-silverware-fork-knife' b-qmfb8ilfk8=''></div>
+				    <span class='col-6 offset-2 count-message' b-qmfb8ilfk8=''>7 Guests for Dinner</span>
+			    </div>
+		    </div>
+	    </div>";
 
-        public const string GroceriesCount = @"<div class='groceries-count-card '>
-           <div class='dashboard-count-card accent-color-3'>
-              <div class='carlton-card'>
-                 <div class='container'>
-                    <div class='card'>
-                       <div class='card-body'>
-                          <div class='row status-row'>
-                             <h5 class='col-9 card-title'></h5>
-                             <div class='col-3 status-icon'>
-                             </div>
-                          </div>
-                          <div class='header-content'>
-                          </div>
-                          <div class='primary-content'>
-                             <div class='row'>
-                                <div class='col-3 offset-1 count-icon mdi mdi-36px accent-color-3 mdi-cart'></div>
-                                <span class='col-6 offset-1 count-message'>7 Low Items</span>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-           </div>
-        </div>";
+        public const string GroceriesCount = @"
+	    <div class='card accent-color-3' b-qmfb8ilfk8=''>
+		    <div class='card-body' b-qmfb8ilfk8=''>
+			    <div class='row' b-qmfb8ilfk8=''>
+				    <div class='col-3 count-icon mdi mdi-36px mdi-cart' b-qmfb8ilfk8=''></div>
+				    <span class='col-6 offset-2 count-message' b-qmfb8ilfk8=''>7 Low Items</span>
+			    </div>
+            </div>
+		</div>";
     }
 }
 
