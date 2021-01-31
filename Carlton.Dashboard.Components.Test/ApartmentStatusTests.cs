@@ -1,6 +1,6 @@
 ﻿using Xunit;
 using Bunit;
-using Carlton.Dashboard.ViewModels.TestViewModels;
+using Carlton.Dashboard.Models.TestModels;
 
 namespace Carlton.Dashboard.Components.Test
 {
@@ -12,7 +12,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<ApartmentStatusListItem>(
-                ("ViewModel", ApartmentStatusTestViewModels.CompletedStatusViewModel())
+                ("ViewModel", ApartmentStatusTestModels.CompletedStatusModel())
             );
 
             // Assert
@@ -25,7 +25,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<ApartmentStatusListItem>(
-                ("ViewModel", ApartmentStatusTestViewModels.InCompleteStatusViewModel())
+                ("ViewModel", ApartmentStatusTestModels.InCompleteStatusModel())
             );
 
             // Assert
@@ -38,7 +38,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<ApartmentStatusListItem>(
-                ("ViewModel", ApartmentStatusTestViewModels.CompletedStatusViewModel())
+                ("ViewModel", ApartmentStatusTestModels.CompletedStatusModel())
             );
 
             // Act
@@ -54,7 +54,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<ApartmentStatusListItem>(
-                ("ViewModel", ApartmentStatusTestViewModels.InCompleteStatusViewModel())
+                ("ViewModel", ApartmentStatusTestModels.InCompleteStatusModel())
             );
 
             // Act
@@ -70,7 +70,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<ApartmentStatusListItem>(
-                ("ViewModel", ApartmentStatusTestViewModels.GarbageViewModel())
+                ("ViewModel", ApartmentStatusTestModels.GarbageModel())
             );
 
             // Act
@@ -86,7 +86,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<ApartmentStatusListItem>(
-                ("ViewModel", ApartmentStatusTestViewModels.RecycleViewModel())
+                ("ViewModel", ApartmentStatusTestModels.RecycleModel())
             );
 
             // Act
@@ -102,7 +102,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<ApartmentStatusListItem>(
-                ("ViewModel", ApartmentStatusTestViewModels.GroceriesViewModel())
+                ("ViewModel", ApartmentStatusTestModels.GroceriesModel())
             );
 
             // Act
@@ -118,7 +118,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<ApartmentStatusListItem>(
-                ("ViewModel", ApartmentStatusTestViewModels.CleaningViewModel())
+                ("ViewModel", ApartmentStatusTestModels.CleaningModel())
             );
 
             // Act
@@ -134,7 +134,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<ApartmentStatusListItem>(
-                ("ViewModel", ApartmentStatusTestViewModels.LaundryViewModel())
+                ("ViewModel", ApartmentStatusTestModels.LaundryModel())
             );
 
             // Act
@@ -150,7 +150,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<ApartmentStatusListItem>(
-                ("ViewModel", ApartmentStatusTestViewModels.DryCleaningViewModel())
+                ("ViewModel", ApartmentStatusTestModels.DryCleaningModel())
             );
 
             // Act
@@ -166,7 +166,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<ApartmentStatusListCard>(
-                ("ViewModel", ApartmentStatusTestViewModels.DefaultApartmentStatusViewModel()));
+                ("ViewModel", ApartmentStatusTestModels.DefaultApartmentStatusModel()));
 
             // Act
             var items = cut.FindComponents<ApartmentStatusListItem>();
@@ -181,7 +181,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<ApartmentStatusListCard>(
-                ("ViewModel", ApartmentStatusTestViewModels.DefaultApartmentStatusViewModel()));
+                ("ViewModel", ApartmentStatusTestModels.DefaultApartmentStatusModel()));
 
             // Act
             var item = cut.FindComponent<ApartmentStatusListItem>();

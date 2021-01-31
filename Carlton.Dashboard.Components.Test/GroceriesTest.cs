@@ -1,6 +1,6 @@
 ﻿using Xunit;
 using Bunit;
-using Carlton.Dashboard.ViewModels.TestViewModels;
+using Carlton.Dashboard.Models.TestModels;
 
 namespace Carlton.Dashboard.Components.Test
 {
@@ -12,7 +12,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<GroceriesListItem>(
-                ("ViewModel", GroceriesTestViewModels.GroceriesLowListItemViewModel())
+                ("ViewModel", GroceriesTestModels.GroceriesLowListItemModel())
             );
 
             // Assert
@@ -25,7 +25,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<GroceriesListItem>(
-                ("ViewModel", GroceriesTestViewModels.GroceriesMediumListItemViewModel())
+                ("ViewModel", GroceriesTestModels.GroceriesMediumListItemModel())
             );
 
             // Assert
@@ -38,7 +38,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<GroceriesListItem>(
-                ("ViewModel", GroceriesTestViewModels.GroceriesHighListItemViewModel())
+                ("ViewModel", GroceriesTestModels.GroceriesHighListItemModel())
             );
 
             // Assert
@@ -51,7 +51,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Assert
             var cut = RenderComponent<GroceriesListItem>(
-                ("ViewModel", GroceriesTestViewModels.GroceriesLowListItemViewModel())
+                ("ViewModel", GroceriesTestModels.GroceriesLowListItemModel())
             );
 
             // Act
@@ -67,7 +67,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<GroceriesListItem>(
-                ("ViewModel", GroceriesTestViewModels.GroceriesHighListItemViewModel())
+                ("ViewModel", GroceriesTestModels.GroceriesHighListItemModel())
             );
 
             // Act
@@ -83,7 +83,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<GroceriesListItem>(
-                ("ViewModel", GroceriesTestViewModels.GroceriesLowListItemViewModel())
+                ("ViewModel", GroceriesTestModels.GroceriesLowListItemModel())
             );
 
             // Act
@@ -99,7 +99,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<GroceriesListItem>(
-                ("ViewModel", GroceriesTestViewModels.GroceriesMediumListItemViewModel())
+                ("ViewModel", GroceriesTestModels.GroceriesMediumListItemModel())
             );
 
             // Act
@@ -115,7 +115,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<GroceriesListItem>(
-                ("ViewModel", GroceriesTestViewModels.GroceriesHighListItemViewModel())
+                ("ViewModel", GroceriesTestModels.GroceriesHighListItemModel())
             );
 
             // Act
@@ -131,7 +131,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<GroceriesListCard>(
-                ("ViewModel", GroceriesTestViewModels.DefaultGroceriesListViewModel()));
+                ("ViewModel", GroceriesTestModels.DefaultGroceriesListModel()));
 
             // Act
             var items = cut.FindComponents<GroceriesListItem>();
@@ -146,7 +146,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<GroceriesListCard>(
-                ("ViewModel", GroceriesTestViewModels.DefaultGroceriesListViewModel()));
+                ("ViewModel", GroceriesTestModels.DefaultGroceriesListModel()));
 
             // Act
             var item= cut.FindComponent<GroceriesListItem>();

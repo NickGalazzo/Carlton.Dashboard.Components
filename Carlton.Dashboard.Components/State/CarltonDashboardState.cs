@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Carlton.Dashboard.ViewModels;
+using Carlton.Dashboard.Models;
 
 namespace Carlton.Dashboard.Components.State
 {

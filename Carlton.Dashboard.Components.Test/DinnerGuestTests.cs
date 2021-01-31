@@ -1,7 +1,7 @@
 ﻿using Xunit;
 using Bunit;
-using Carlton.Dashboard.ViewModels;
-using Carlton.Dashboard.ViewModels.TestViewModels;
+using Carlton.Dashboard.Models;
+using Carlton.Dashboard.Models.TestModels;
 
 namespace Carlton.Dashboard.Components.Test
 {
@@ -14,7 +14,7 @@ namespace Carlton.Dashboard.Components.Test
             // Arrange
             var cut = RenderComponent<DinnerGuestsListItem>(
                 ("ShowIndicator", true),
-                ("ViewModel", DinnerGuestsTestViewModels.DinnerGuestHomeViewModel())
+                ("ViewModel", DinnerGuestsTestModels.DinnerGuestHomeModel())
             );
 
             // Assert
@@ -28,7 +28,7 @@ namespace Carlton.Dashboard.Components.Test
             // Arrange
             var cut = RenderComponent<DinnerGuestsListItem>(
                  ("ShowIndicator", true),
-                ("ViewModel", DinnerGuestsTestViewModels.DinnerGuestNotHomeViewModel())
+                ("ViewModel", DinnerGuestsTestModels.DinnerGuestNotHomeModel())
             );
 
             // Assert
@@ -41,7 +41,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<DinnerGuestsSelfStatus>(
-                ("ViewModel", DinnerGuestsTestViewModels.DinnerGuestsSelfHomeViewModel()));
+                ("ViewModel", DinnerGuestsTestModels.DinnerGuestsSelfHomeModel()));
 
             // Act
             var nameElement = cut.Find(".guest-name");
@@ -56,7 +56,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<DinnerGuestsSelfStatus>(
-                ("ViewModel", DinnerGuestsTestViewModels.DinnerGuestsSelfHomeViewModel()));
+                ("ViewModel", DinnerGuestsTestModels.DinnerGuestsSelfHomeModel()));
 
             // Act
             var nameElement = cut.Find("input[type='checkbox'].switch");
@@ -71,7 +71,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<DinnerGuestsSelfStatus>(
-                ("ViewModel", DinnerGuestsTestViewModels.DinnerGuestsSelfHomeViewModel()));
+                ("ViewModel", DinnerGuestsTestModels.DinnerGuestsSelfHomeModel()));
 
             // Act
             var reasonElement = cut.Find(".carlton-select .options");
@@ -86,7 +86,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<DinnerGuestsSelfStatus>(
-                ("ViewModel", DinnerGuestsTestViewModels.DinnerGuestsSelfNotHomeViewModel()));
+                ("ViewModel", DinnerGuestsTestModels.DinnerGuestsSelfNotHomeModel()));
 
             // Act
             var reasonElement = cut.Find(".carlton-select .options");
@@ -101,7 +101,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<DinnerGuestsSelfStatus>(
-                ("ViewModel", DinnerGuestsTestViewModels.DinnerGuestsSelfHomeViewModel()));
+                ("ViewModel", DinnerGuestsTestModels.DinnerGuestsSelfHomeModel()));
 
             // Act
             var reasonElement = cut.FindAll(".guest-message");
@@ -116,7 +116,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<DinnerGuestsSelfStatus>(
-                ("ViewModel", DinnerGuestsTestViewModels.DinnerGuestsSelfNotHomeViewModel()));
+                ("ViewModel", DinnerGuestsTestModels.DinnerGuestsSelfNotHomeModel()));
 
             // Act
             var reasonElement = cut.Find(".guest-message");
@@ -133,7 +133,7 @@ namespace Carlton.Dashboard.Components.Test
             var expected = new DinnerGuestsHomeForDinnerStatusChangeEvent(2, true);
             DinnerGuestsHomeForDinnerStatusChangeEvent result = null;
             var cut = RenderComponent<DinnerGuestsSelfStatus>(
-                ("ViewModel", DinnerGuestsTestViewModels.DinnerGuestsSelfNotHomeViewModel()),
+                ("ViewModel", DinnerGuestsTestModels.DinnerGuestsSelfNotHomeModel()),
                  ComponentParameterFactory.EventCallback("OnComponentEvent", (evt) => result = (DinnerGuestsHomeForDinnerStatusChangeEvent) evt));
             
             // Act
@@ -151,7 +151,7 @@ namespace Carlton.Dashboard.Components.Test
             var expected = new DinnerGuestsHomeForDinnerStatusChangeEvent(1, false);
             DinnerGuestsHomeForDinnerStatusChangeEvent result = null;
             var cut = RenderComponent<DinnerGuestsSelfStatus>(
-                ("ViewModel", DinnerGuestsTestViewModels.DinnerGuestsSelfHomeViewModel()),
+                ("ViewModel", DinnerGuestsTestModels.DinnerGuestsSelfHomeModel()),
                  ComponentParameterFactory.EventCallback("OnComponentEvent", (evt) => result = (DinnerGuestsHomeForDinnerStatusChangeEvent)evt));
             
             // Act
@@ -169,7 +169,7 @@ namespace Carlton.Dashboard.Components.Test
             var expected = new DinnerGuestsReasonChangedEvent(2, 2);
             DinnerGuestsReasonChangedEvent result = null;
             var cut = RenderComponent<DinnerGuestsSelfStatus>(
-                ("ViewModel", DinnerGuestsTestViewModels.DinnerGuestsSelfNotHomeViewModel()),
+                ("ViewModel", DinnerGuestsTestModels.DinnerGuestsSelfNotHomeModel()),
                  ComponentParameterFactory.EventCallback("OnComponentEvent", (evt) => result = (DinnerGuestsReasonChangedEvent)evt));
 
             // Act
@@ -185,7 +185,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Assert
             var cut = RenderComponent<DinnerGuestsSelfStatus>(
-             ("ViewModel", DinnerGuestsTestViewModels.DinnerGuestsSelfNotHomeViewModel()));
+             ("ViewModel", DinnerGuestsTestModels.DinnerGuestsSelfNotHomeModel()));
 
             // Act
             var items = cut.FindComponents<DinnerGuestsListItem>();
@@ -200,7 +200,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<DinnerGuestsSelfStatus>(
-             ("ViewModel", DinnerGuestsTestViewModels.DinnerGuestsSelfNotHomeViewModel()));
+             ("ViewModel", DinnerGuestsTestModels.DinnerGuestsSelfNotHomeModel()));
 
             // Act
             var item = cut.FindComponent<DinnerGuestsListItem>();
@@ -215,7 +215,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<DinnerGuestsListCard>(
-                ("ViewModel", DinnerGuestsTestViewModels.DefaultHomeForDinnerViewModel()));
+                ("ViewModel", DinnerGuestsTestModels.DefaultHomeForDinnerModel()));
 
             // Act
             var listItems = cut.FindComponents<DinnerGuestsListItem>();
@@ -230,7 +230,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<DinnerGuestsListCard>(
-                ("ViewModel", DinnerGuestsTestViewModels.DefaultHomeForDinnerViewModel()));
+                ("ViewModel", DinnerGuestsTestModels.DefaultHomeForDinnerModel()));
 
             // Act
             var listItem = cut.FindComponents<DinnerGuestsListItem>()[1];
@@ -245,7 +245,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<DinnerGuestsListCard>(
-                ("ViewModel", DinnerGuestsTestViewModels.DefaultHomeForDinnerViewModel()));
+                ("ViewModel", DinnerGuestsTestModels.DefaultHomeForDinnerModel()));
 
             // Act
             var listItems = cut.FindComponents<DinnerGuestsSelfStatus>();

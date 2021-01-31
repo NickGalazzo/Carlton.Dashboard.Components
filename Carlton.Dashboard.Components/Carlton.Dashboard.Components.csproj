@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+   <Authors>Nicholas Galazzo</Authors>
+    <Product>Project Carlton</Product>
+    <Company>Project Carlton</Company>
+    <Description>Contains the blazor components for the Carlton dashboard.</Description>
+    <RepositoryUrl>git@github.com:NickGalazzo/Carlton.Dashboard.Components.git</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,15 +22,11 @@
 
 
   <ItemGroup>
+    <PackageReference Include="Carlton.Base.Client.Components" Version="1.0.0" />
+    <PackageReference Include="Carlton.Base.Client.State.Abstractions" Version="1.0.0" />
+    <PackageReference Include="Carlton.Dashboard.Models" Version="1.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components" Version="5.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.0" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\libs\Carlton.Base.Client.Components\Carlton.Base.Client.Components.csproj" />
-    <ProjectReference Include="..\..\libs\Carlton.Base.Client.State.Abstractions\Carlton.Base.Client.State.Abstractions.csproj" />
-    <ProjectReference Include="..\Carlton.Dashboard.ViewModels\Carlton.Dashboard.ViewModels.csproj" />
   </ItemGroup>
 
 

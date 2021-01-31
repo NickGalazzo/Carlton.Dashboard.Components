@@ -1,6 +1,6 @@
 ﻿using Xunit;
 using Bunit;
-using Carlton.Dashboard.ViewModels.TestViewModels;
+using Carlton.Dashboard.Models.TestModels;
 
 namespace Carlton.Dashboard.Components.Test
 {
@@ -12,7 +12,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<FeedListItem>(
-                ("ViewModel", FeedListTestViewModels.DefaultFeedListItemViewModel())
+                ("ViewModel", FeedListTestModels.DefaultFeedListItemModel())
             );
 
             // Assert
@@ -25,7 +25,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<FeedListItem>(
-                ("ViewModel", FeedListTestViewModels.DefaultFeedListItemViewModel())
+                ("ViewModel", FeedListTestModels.DefaultFeedListItemModel())
             );
 
             // Act
@@ -41,7 +41,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<FeedListItem>(
-                ("ViewModel", FeedListTestViewModels.DefaultFeedListItemViewModel())
+                ("ViewModel", FeedListTestModels.DefaultFeedListItemModel())
             );
 
             // Act
@@ -57,7 +57,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<FeedListItem>(
-                ("ViewModel", FeedListTestViewModels.DefaultFeedListItemViewModel())
+                ("ViewModel", FeedListTestModels.DefaultFeedListItemModel())
             );
 
             // Act
@@ -73,7 +73,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<FeedListItem>(
-                ("ViewModel", FeedListTestViewModels.TenMinutesAgoFeedListItemViewModel())
+                ("ViewModel", FeedListTestModels.TenMinutesAgoFeedListItemModel())
             );
 
             // Act
@@ -89,7 +89,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<FeedListItem>(
-                ("ViewModel", FeedListTestViewModels.ThreeHoursAgoFeedListItemViewModel())
+                ("ViewModel", FeedListTestModels.ThreeHoursAgoFeedListItemModel())
             );
 
             // Act
@@ -105,7 +105,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Assert
             var cut = RenderComponent<FeedListItem>(
-                ("ViewModel", FeedListTestViewModels.PreviousDateFeedListItemViewModel())
+                ("ViewModel", FeedListTestModels.PreviousDateFeedListItemModel())
             );
 
             // Act
@@ -121,7 +121,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<FeedListCard>(
-                ("ViewModel", FeedListTestViewModels.DefaultFeedItemListViewModel())
+                ("ViewModel", FeedListTestModels.DefaultFeedItemListModel())
             );
 
             // Act
@@ -137,7 +137,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<FeedListCard>(
-                ("ViewModel", FeedListTestViewModels.DefaultFeedItemListViewModel())
+                ("ViewModel", FeedListTestModels.DefaultFeedItemListModel())
             );
 
             // Act

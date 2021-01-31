@@ -1,8 +1,8 @@
 using System.Linq;
 using Xunit;
 using Bunit;
-using Carlton.Dashboard.ViewModels;
-using Carlton.Dashboard.ViewModels.TestViewModels;
+using Carlton.Dashboard.Models;
+using Carlton.Dashboard.Models.TestModels;
 
 namespace Carlton.Dashboard.Components.Test
 {
@@ -14,7 +14,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<ToDoListItem>(
-                ("ViewModel", ToDoListTestViewModels.ToDoListItemUncheckedViewModel())
+                ("ViewModel", ToDoListTestModels.ToDoListItemUncheckedModel())
             );
 
             // Assert
@@ -27,7 +27,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<ToDoListItem>(
-                ("ViewModel", ToDoListTestViewModels.ToDoListItemCheckedViewModel())
+                ("ViewModel", ToDoListTestModels.ToDoListItemCheckedModel())
             );
 
             // Assert
@@ -42,7 +42,7 @@ namespace Carlton.Dashboard.Components.Test
             var expected = new ToDoStatusChangedEvent(1, true);
             ToDoStatusChangedEvent result = null;
             var cut = RenderComponent<ToDoListItem>(
-                ("ViewModel", ToDoListTestViewModels.ToDoListItemUncheckedViewModel()),
+                ("ViewModel", ToDoListTestModels.ToDoListItemUncheckedModel()),
                 ComponentParameterFactory.EventCallback("OnComponentEvent", (evt) => result = (ToDoStatusChangedEvent)evt)
             );
 
@@ -62,7 +62,7 @@ namespace Carlton.Dashboard.Components.Test
             var expected = new ToDoStatusChangedEvent(1, false);
             ToDoStatusChangedEvent result = null;
             var cut = RenderComponent<ToDoListItem>(
-                ("ViewModel", ToDoListTestViewModels.ToDoListItemCheckedViewModel()),
+                ("ViewModel", ToDoListTestModels.ToDoListItemCheckedModel()),
                 ComponentParameterFactory.EventCallback("OnComponentEvent", (evt) => result = (ToDoStatusChangedEvent)evt)
             );
 
@@ -81,7 +81,7 @@ namespace Carlton.Dashboard.Components.Test
             // Arrange
             var ToDoLabelText = "Take Out Garbage";
             var cut = RenderComponent<ToDoListItem>(
-                ("ViewModel", ToDoListTestViewModels.ToDoListItemCheckedViewModel())
+                ("ViewModel", ToDoListTestModels.ToDoListItemCheckedModel())
             );
 
             // Act
@@ -97,7 +97,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<ToDoListCard>(
-                ("ViewModel", ToDoListTestViewModels.DefaultToDoListViewModel())
+                ("ViewModel", ToDoListTestModels.DefaultToDoListModel())
             );
 
             // Act
@@ -113,7 +113,7 @@ namespace Carlton.Dashboard.Components.Test
         {
             // Arrange
             var cut = RenderComponent<ToDoListCard>(
-                ("ViewModel", ToDoListTestViewModels.DefaultToDoListViewModel())
+                ("ViewModel", ToDoListTestModels.DefaultToDoListModel())
             );
 
             // Act
